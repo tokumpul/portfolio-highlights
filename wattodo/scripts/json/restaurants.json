@@ -1,0 +1,304 @@
+{
+  "restaurants":[
+    {
+      "name":"Ravintola-Bar Ali Baba",
+      "address":"Yliopistonkatu 21",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Sun 11.00-22.00",
+      "phone":"014617731",
+      "category":["Kebab","Pizza","Salad"],
+      "ad":"./images/ad-1.png"
+    },
+    {
+      "name":"Hanko Sushi",
+      "address":"Kauppakatu 20",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Thu 11.00-19.30, Fri-Sat 11.00-20.30, Sun 12.00-19.30",
+      "phone":"+358504674225",
+      "category":["Asian","Fish","Sushi","Vegetarian"],
+      "ad":"./images/ad-5.png"
+    },
+    {
+      "name":"Haiku Sushi",
+      "address":"Kauppakatu 31",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Fri 14.00-20.00, Sat 12.00-19.30, Sun 12.00-17.30",
+      "phone":"+358401546933",
+      "category":["Asian","Fish","Sushi","Vegetarian"],
+      "ad":"./images/ad-5.png"
+    },
+    {
+      "name":"Muang Thai",
+      "address":"Yliopistonkatu 36",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Tue 10.30-18.00, Wed-Fri 10.30-20.00, Sat 11.00-20.00, Sun closed",
+      "phone":"+358102193590",
+      "category":["Asian","Fish","Sushi","Vegetarian"],
+      "ad":"./images/ad-5.png"
+    },
+    {
+      "name":"McDonald's",
+      "address":"Kauppakatu 29",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Tue 08.00-22.00, Wed-Fri 08.00-05.00, Sat 11.00-20.00, Sun 11.00-22.00",
+      "phone":"+358102390550",
+      "category":["Burger"],
+      "ad":"./images/ad-6.png"
+    },
+    {
+      "name":"Burger King",
+      "address":"Hannikaisenkatu 20",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Tue 10.00-00.00, Wed-Sat 10.00-05.00, Sun 11.00-00.00",
+      "phone":"+358207701805",
+      "category":["Burger"],
+      "ad":"./images/ad-6.png"
+    },
+    {
+      "name":"Naughty BRGR",
+      "address":"Puistokatu 2-4",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon closed, Tue 10.30-20.30, Wed-Fri 10.30-21.30, Sat 12.00-21.30, Sun closed",
+      "phone":"+358405052992",
+      "category":["Burger","Streetfood","Vegan","Vegetarian"],
+      "ad":"./images/ad-6.png"
+    },
+    {
+      "name":"Classic American Diner",
+      "address":"Asemakatu 5",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Thu 11.00-20.00, Fri 11.00-21.00, Sat 12.00-21.00, Sun 12.00-20.00",
+      "phone":"+358300870492",
+      "category":["Burger","Dessert","Salad","Sandwich","Vegan","Vegetarian"],
+      "ad":"./images/ad-6.png"
+    },
+    {
+      "name":"Taikuri",
+      "address":"Asemakatu 3",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Thu 10.30-21.00, Fri 10.30-22.30, Sat 11.00-22.30, Sun 11.00-20.00",
+      "phone":"+358505226569",
+      "category":["Burger","Fish","Salad","Streetfood","Vegan","Vegetarian"],
+      "ad":"./images/ad-6.png"
+    },
+    {
+      "name":"Passion Food & Bar",
+      "address":"Kauppalaispiha 3",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Sat 14.00-21.00, Sun closed",
+      "phone":"+3581005554",
+      "category":["Burger","Fish","Salad"],
+      "ad":"./images/ad-6.png"
+    },
+    {
+      "name":"Street Bite",
+      "address":"Kauppakatu 29",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon closed, Tue-Thu 11.00-18.00, Fri-Sat 11.00-20.00, Sun closed",
+      "phone":"+358291700790",
+      "category":["Burger","Streetfood","Vegan","Vegetarian"],
+      "ad":"./images/ad-6.png"
+    },
+    {
+      "name":"Subway",
+      "address":"Kauppakatu 27",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Sat 09.00-22.30, Sun 11.00-22.30",
+      "phone":"+358143102111",
+      "category":["Cafe","Salad","Sandwich","Vegetarian"],
+      "ad":"./images/ad-9.png"
+    },
+    {
+      "name":"Picnic",
+      "address":"Hannikaisenkatu 20",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Fri 07.00-19.30, Sat 08.00-17.30, Sun 09.00-19.30",
+      "phone":"+358207590369",
+      "category":["Cafe","Salad","Sandwich"],
+      "ad":"./images/ad-4.png"
+    },
+    {
+      "name":"Fafa's",
+      "address":"Väinönkatu 20",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Thu 11.00-21.00, Fri-Sat 11.00-22.00, Sun 12.00-18.00",
+      "phone":"+358442423647",
+      "category":["Salad","Streetfood","Vegan","Vegetarian"],
+      "ad":"./images/ad-7.png"
+    },
+    {
+      "name":"Jyväskylän Kebab",
+      "address":"Kauppakatu 7",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Fri 10.00-22.00, Sat 11.00-22.00, Sun 12.00-22.00",
+      "phone":"+358146170282",
+      "category":["Kebab","Pizza"],
+      "ad":"./images/ad-3.png"
+    },
+    {
+      "name":"Kebab House",
+      "address":"Kauppakatu 14",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Fri 10.00-22.00, Sat 11.00-22.00, Sun 12.00-22.00",
+      "phone":"+35814212925",
+      "category":["Kebab","Pizza"],
+      "ad":"./images/ad-1.png"
+    },
+    {
+      "name":"Citygrilli",
+      "address":"Ilmarisenkatu 10",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Thu 15.30-01.00, Fri-Sat 18.00-04.30, Sun 18.00-02.00",
+      "phone":"+358449738485",
+      "category":["Kebab"],
+      "ad":"./images/ad-2.png"
+    },
+    {
+      "name":"Bella Roma",
+      "address":"Kauppakatu 41",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Tue 11.00-20.30, Wed-Thu 11.00-21.30, Fri 11.00-22.30, Sat 12.00-22.30, Sun 12.00-19.30",
+      "phone":"+3581005518",
+      "category":["Pizza","Streetfood"],
+      "ad":"./images/ad-3.png"
+    },
+    {
+      "name":"Rax Pizzabuffet",
+      "address":"Kauppakatu 20",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Fri 10.30-20.00, Sat 11.00-20.00, Sun 12.00-20.00",
+      "phone":"+358406416039",
+      "category":["Pizza"],
+      "ad":"./images/ad-1.png"
+    },
+    {
+      "name":"Shalimar",
+      "address":"Hannikaisenkatu 20",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon 10.30-19.15, Tue-Thu 10.30-20.15, Fri 10.30-21.15, Sat 12.00-21.15, Sun 12.00-19.15",
+      "phone":"+35814665088",
+      "category":["Asian","Fish","Vegetarian"],
+      "ad":"./images/ad-10.png"
+    },
+    {
+      "name":"Nagarkot",
+      "address":"Hannikaisenkatu 41",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Fri 10.30-22.00, Sat 12.00-23.00, Sun 12.00-22.00",
+      "phone":"+358401799159",
+      "category":["Asian","Fish"],
+      "ad":"./images/ad-10.png"
+    },
+    {
+      "name":"Beans&more",
+      "address":"Asemakatu 11",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon closed, Tue-Wed 10.30-18.30 Thu-Fri 10.30-19.30, Sat 10.30-17.30, Sun 12.00-16.30",
+      "phone":"+358503517731",
+      "category":["Cafe","Dessert","Sandwich","Vegan","Vegetarian"],
+      "ad":"./images/ad-7.png"
+    },
+    {
+      "name":"Lutakon Nurkka",
+      "address":"Lutakonaukio 3",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Wed 10.30-13.30 Thu-Fri 10.30-13.30 14.00-20.30, Sat 15.00-20.30, Sun closed",
+      "phone":"+358504677737",
+      "category":["Sandwich","Vegetarian"],
+      "ad":"./images/ad-9.png"
+    },
+    {
+      "name":"Arnolds Sokkari",
+      "address":"Kauppakatu 24",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Fri 09.00-18.45, Sat 10.00-17.45, Sun closed",
+      "phone":"+358447770551",
+      "category":["Cafe","Dessert"],
+      "ad":"./images/ad-8.png"
+    },
+    {
+      "name":"Thai Street Food",
+      "address":"Kauppakatu 28",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Thu 11.00-21.00, Fri-Sat 11.00-22.00, Sun 12.00-20.00",
+      "phone":"+358447770551",
+      "category":["Asian","Streetfood","Vegan","Vegetarian"],
+      "ad":"./images/ad-7.png"
+    },
+    {
+      "name":"Pannukakkutalo",
+      "address":"Asemakatu 5",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Thu 11.00-21.00, Fri-Sat 11.00-22.00, Sun 12.00-20.00",
+      "phone":"+358447770551",
+      "category":["Dessert"],
+      "ad":"./images/ad-8.png"
+    },
+    {
+      "name":"Base Camp",
+      "address":"Yliopistonkatu 38",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Fri 10.30-21.30, Sat-Sun 12.00-21.30",
+      "phone":"+358409643464",
+      "category":["Asian","Vegetarian"],
+      "ad":"./images/ad-10.png"
+    },
+    {
+      "name":"Ravintola La Casablanca",
+      "address":"Kauppakatu 10",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Thu 10.30-19.00, Fri 10.30-21.00, Sat 12.00-21.00, Sun 12.00-19.00",
+      "phone":"+358442376263",
+      "category":["Vegan","Vegetarian"],
+      "ad":"./images/ad-7.png"
+    },
+    {
+      "name":"Hualong",
+      "address":"Kauppakatu 27",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Fri 11.00-21.00, Sat-Sun 12.00-21.00",
+      "phone":"+358401508889",
+      "category":["Asian","Vegetarian"],
+      "ad":"./images/ad-10.png"
+    },
+    {
+      "name":"Vietnamilainen Ravintola Fit",
+      "address":"Yliopistonkatu 26 F",
+      "postcode": 40100,
+      "postoffice":"Jyväskylä",
+      "openinghours":"Mon-Wed closed, Thu-Fri 12.00-17.45, Sat 12.00-16.45, Sun closed",
+      "phone":"+358401519999",
+      "category":["Asian","Vegetarian"],
+      "ad":"./images/ad-10.png"
+    }
+  ]
+}

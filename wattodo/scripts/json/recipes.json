@@ -1,0 +1,104 @@
+{
+  "recipes":[
+    {
+      "name":"Butter bean & chorizo stew",
+      "category":["Beef"],
+      "portions": 4,
+      "instructions":["1. Slice the chorizo and fry it in a pan","2. Add the tomatoes and butter beans","3. Bring to the boil and simmer for 10 minutes","4. Insert pesto"],
+      "ingredients":["200g chorizo","800g crushed tomatoes","800g butter beans","Pesto"],
+      "duration":"20",
+      "price":"12",
+      "image": "./images/recipe-1.jpg"
+    },
+    {
+      "name":"Salmon & spinach pasta",
+      "category":["Fish","Pasta"],
+      "portions": 2,
+      "instructions":["1. Cook the pasta","2. Fry the salmon for 4-6 minutes with the tomatoes in their oil","3. Add the drained pasta and the spinach","4. Stir for 1-2 minutes"],
+      "ingredients":["200g penne pasta","300g sliced salmon","60g sundried tomatoes","80g spinach"],
+      "duration":"15",
+      "price":"10",
+      "image":"./images/recipe-2.jpg"
+    },
+    {
+      "name":"Prawn laksa",
+      "category":["Fish","Soup"],
+      "portions": 2,
+      "instructions":["1. Slice the zucchini so that it resembles pasta (you can use your vegetable peeler)","2. Heat 1tsp of oil in a pan","3. Add the curry paste and cook for 1min","4. Pour in the coconut milk, leave to bubble for a few minutes","5. Add prawns and zucchini pasta and cook for 1 more minute"],
+      "ingredients":["3tbsp Thai green curry paste","400ml can coconut milk","150g frozen prawns","1 Zucchini"],
+      "duration":"15",
+      "price":"9",
+      "image":"./images/recipe-3.jpg"
+    },
+    {
+      "name":"Budget Stew",
+      "category":["Beef","Pasta"],
+      "portions": 4,
+      "instructions":["1. Fry the minced meat and boil the pasta","2. Drain the pasta and combine it with the fried minced meat","3. Spice things up with salt, pepper and other spices if you dare","4. Add pea-corn-paprika mix for color"],
+      "ingredients":["400g cheapest pasta","400g cheapest minced meat","1 bag of frozen pea-corn-paprika mix"],
+      "duration":"15",
+      "price":"5",
+      "image":"./images/recipe-4.jpg"
+    },
+    {
+      "name":"One-pot tomato & basil",
+      "category":["Pasta","Vegetarian"],
+      "portions": 4,
+      "instructions":["1. Slice the tomatoes and the onions","2. Put all ingredients in a pan they all fit in","3. Add salt, pepper and 900ml of water","4. Cook for 15 minutes stirring frequently until pasta is cooked and water reduced"],
+      "ingredients":["350g pasta","250g cherry tomatoes","2 garlic cloves","Olive oil","Chiliflakes","Basil"],
+      "duration":"25",
+      "price":"11",
+      "image":"./images/recipe-5.jpg"
+    },
+    {
+      "name":"Fried rice",
+      "category":["Vegetarian"],
+      "portions": 4,
+      "instructions":["1. Boil your rice and fry the vegetables in a pan with oil","2. Put the rice in the pan with the vegetables","3. Add oyster sauce"],
+      "ingredients":["4dl rice","450g frozen vegetables","Oyster sauce"],
+      "duration":"15",
+      "price":"7",
+      "image":"./images/recipe-6.jpg"
+    },
+    {
+      "name":"Mushroom omelette",
+      "category":["Vegetarian"],
+      "portions": 1,
+      "instructions":["1. Heat oil in a pan and fry chopped mushrooms on a high heat for 2-3 minutes","2. Put mushrooms in a bowl and mix with cheese and parsley","3. Cook eggs in pan swirling now and again","4. Pour mushroom mix over one half of the omelette and fold the other side over for cover","5. Cook for a few moments"],
+      "ingredients":["1 large portobello","Grated cheese","Handful of parsley leaves","2 eggs"],
+      "duration":"10",
+      "price":"5",
+      "image":"./images/recipe-7.jpg"
+    },
+    {
+      "name":"Mac & Cheese",
+      "category":["Pasta","Vegetarian"],
+      "portions": 3,
+      "instructions":["1. Put the milk and the pasta in a pan","2. Simmer for about 20min on medium heat","3. Stir frequently so the milk won't burn","4. Remove from heat and mix in the cheese"],
+      "ingredients":["5dl Pasta","5dl milk","2.5dl white cheddar"],
+      "duration":"25",
+      "price":"5",
+      "image":"./images/recipe-8.jpg"
+    },
+    {
+      "name":"Chicken Teriyaki",
+      "category":["Chicken"],
+      "portions": 4,
+      "instructions":["1. Fry chicken in a pan with oil","2. Add soy sauce and brown sugar","3. Bring to the boil","4. Let simmer and stir until sauce has reduced"],
+      "ingredients":["600g chicken","200ml soy sauce","100g brown sugar"],
+      "duration":"30",
+      "price":"12",
+      "image":"./images/recipe-9.jpg"
+    },
+    {
+      "name":"Tender Chicken BBQ",
+      "category":["Chicken"],
+      "portions": 4,
+      "instructions":["1. Heat oven to 190 degrees celsius","2. Dip chicken fillets into the BBQ sauce and then coat them with breadcrums","3. Bake for 15 minutes","4. Brush BBQ sauce all over the chicken","5. Bake for another 10 minutes"],
+      "ingredients":["500g chicken","Bread crums","2dl BBQ sauce"],
+      "duration":"30",
+      "price":"10",
+      "image":"./images/recipe-10.jpg"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "activities":[
+    {
+      "name":"HIIT Session 1",
+      "category":["Physical Exercise"],
+      "instructions":["1. Perform at 70-80% of maximum effort (100% if you're crazy)","2. 60 second rest between each move"],
+      "steps":["1. 20 x Squats","2. 20 x Lunge","3. 10 x Burpees","4. 10 x Push ups","5. 20 x Mountain climbers (each side)","6. 40 x Running high knees"],
+      "duration":"20min"
+    },
+    {
+      "name":"Core Workout",
+      "category":["Physical Exercise"],
+      "instructions":["1. Two to six sets","2. Two min rest between sets"],
+      "steps":["1. 10 x Knee crunches","2. 10 x Leg crunches","3. 20 x Leg raises","4. 12 x Cycling crunches","5. 20 x Flutter kicks","6. 10 x Heel touches","7. 60 sec Elbow plank"],
+      "duration":"20min"
+    },
+    {
+      "name":"Meditation Session 1",
+      "category":["Relaxing"],
+      "instructions":["1. Practice daily","2. Aim for five minutes"],
+      "steps":["1. Find a quiet spot","2. Sit comfortably","3. Focus on your breath","4. Feel the breath going in and out","5. Notice thoughts that arise","6. Return to your breath"],
+      "duration":"5min"
+    },
+    {
+      "name":"Bodyweight Exercise 1",
+      "category":["Physical Exercise"],
+      "instructions":["1. Two to six sets","2. Two min rest between sets"],
+      "steps":["1. 20 x Lunges","2. 5 x Shoulder presses","3. 10 x One legged squat","4. 20 x Shoulder touches","5. 12 x Push ups","6. 20 x Plank jump-ins","7. 20 x Sit ups","8. 20 x Sitting twists"],
+      "duration":"25min"
+    },
+    {
+      "name":"Mock Jumping Rope",
+      "category":["Cardio"],
+      "instructions":["1. Stand with your feet hip-distance apart","2. Jump few inches off the ground with soft knees","3. Do it for as long as you want","4. Take breaks if necessary","5. You can use a real jumping rope if you have one!"],
+      "steps":[""],
+      "duration":"20min"
+    },
+    {
+      "name":"Fast Feet",
+      "category":["Cardio"],
+      "instructions":["1. Stand with feet shoulder-width apart","2. Come to the ball of your foot with knees slightly bent","3. Lift your feet few inches in turns as fast as you can"],
+      "steps":[""],
+      "duration":"15min"
+    },
+    {
+      "name":"Take a walk",
+      "category":["Cardio"],
+      "instructions":["1. Walk to one direction for 25 minutes","2. Turn back"],
+      "steps":[""],
+      "duration":"50min"
+    },
+    {
+      "name":"Wake up your body",
+      "category":["Physical Exercise"],
+      "instructions":["1. Stretch dynamically for a minute","2. Repeat the rest three times","3. No breaks"],
+      "steps":["1. 1min Push ups","2. 1min Elbow plank","3. 1min Squats"],
+      "duration":"10min"
+    },
+    {
+      "name":"Bodyweight Exercise 2",
+      "category":["Physical Exercise"],
+      "instructions":["1. Repeat the following four times","2. 30 seconds each"],
+      "steps":["1. Bodyweight squats","2. Knee push ups","3. V sit ups","4. Mountain climbers","5. Rest"],
+      "duration":"10min"
+    },
+    {
+      "name":"Dooms Day Bodyweight",
+      "category":["Physical Exercise"],
+      "instructions":["1. Repeat the following 10 times","2. 30 seconds each","3. After every round rest 1min"],
+      "steps":["1. Bodyweight squats","2. V sit ups","3. Push ups","4. Burpees"],
+      "duration":"30min"
+    },
+    {
+      "name":"Super Fast Cardio",
+      "category":["Cardio"],
+      "instructions":["1. Repeat the following two times","2. Rest 10 seconds between steps"],
+      "steps":["1. Jumping jacks 20sec","2. Burpees 20sec","3. Skater hops 20sec","4. Jump squats 20sec"],
+      "duration":"4min"
+    },
+    {
+      "name":"Staircase Fun",
+      "category":["Cardio"],
+      "instructions":["1. Go and find the nearest staircase","2. Walk it up and down for 25 minutes"],
+      "steps":[""],
+      "duration":"25min"
+    },
+    {
+      "name":"Not So Forbidden Forest",
+      "category":["Cardio","Relaxing"],
+      "instructions":["1. Go outside and find the nearest forest","2. Walk in there for one hour","3. Remember proper equipment"],
+      "steps":[""],
+      "duration":"60min"
+    },
+    {
+      "name":"Read A Book",
+      "category":["Relaxing"],
+      "instructions":["1. Find a book and read it","2. If you don't have any books, go to the library and spend some time there"],
+      "steps":[""],
+      "duration":"60min"
+    },
+    {
+      "name":"Off The Grid",
+      "category":["Relaxing"],
+      "instructions":["1. Close all your eletronic devices for two hours","2. Cook some food or stare at a wall, you decide"],
+      "steps":[""],
+      "duration":"120min"
+    },
+    {
+      "name":"Audio Sensation",
+      "category":["Relaxing"],
+      "instructions":["1. Listen to music, a podcast or something else for 45 minutes","2. Only listen and be still","3. No other activities"],
+      "steps":[""],
+      "duration":"45min"
+    },
+    {
+      "name":"Tell Me About It",
+      "category":["Relaxing"],
+      "instructions":["1. Write what goes through your mind","2. Use pen and paper, a computer or whatever you want","3. Just let it all out"],
+      "steps":[""],
+      "duration":"30min"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+.column {
+  h1 {
+    align-items: center;
+    border: .125rem solid $gold;
+    border-radius: 50%;
+    background-color: $button;
+    color: $gold;
+    cursor: pointer;
+    display: flex;
+    height: 8rem;
+    justify-content: center;
+    margin: auto;
+    width: 8rem;
+  }
+  .back-arrow {
+    align-items: center;
+    background-color: transparent;
+    border: .125rem solid $gold;
+    border-radius: 50%;
+    color: $gold;
+    display: flex;
+    font-size: 1.25rem;
+    height: 3rem;
+    justify-content: center;
+    width: 3rem;
+  }
+  .button {
+    background-color: $button;
+    border: .125rem solid $gold;
+    color: $gold;
+    height: 3rem;
+  }
+  .drop-shadow {
+    box-shadow: .25rem .25rem .8rem $shadow, -.25rem -.25rem .8rem $highlight;
+  }
+  .icon {
+    color: $white;
+  }
+  .input {
+    background-color: transparent;
+    border: .125rem solid $gold;
+    color: $gold;
+    font-size: 1.25rem;
+    height: 3rem;
+  }
+  .legend {
+    color: $gold;
+    padding-bottom: .5rem;
+  }
+  .list {
+    background-color: transparent;
+    border: .125rem solid $gold;
+    border-radius: 1.5rem;
+    color: $gold;
+    padding: .5rem 1.5rem;
+  }
+  .recipe {
+    .input {
+      font-size: 1rem;
+    }
+  }
+  .select {
+    select {
+      background-color: transparent;
+      border: .125rem solid $gold;
+      color: $gold;
+      height: 3rem;
+      option {
+        background-color: $black;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    &:after {
+      border-color: $gold !important;
+    }
+  }
+  .show-on-map {
+    align-items: center;
+    background-color: transparent;
+    border: .125rem solid $gold;
+    border-radius: 50%;
+    display: flex;
+    font-size: 1.25rem;
+    height: 3rem;
+    justify-content: center;
+    margin: 0 auto;
+    width: 3rem;
+  }
+  .wattodo-logo {
+    max-height: 6rem;
+    max-width: 6rem;
+  }
+}

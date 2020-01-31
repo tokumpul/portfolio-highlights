@@ -1,0 +1,22 @@
+{
+  "name":"Wattodo",
+  "short_name":"Wattodo",
+  "start_url":"./",
+  "scope":"./",
+  "theme_color":"#1c1c1c",
+  "background_color":"#1c1c1c",
+  "orientation":"portrait-primary",
+  "display":"standalone",
+  "icons": [
+    {
+      "sizes":"192x192",
+      "src":"./images/wattodo-192x192.png",
+      "type":"image/png"
+    },
+    {
+      "sizes":"512x512",
+      "src":"./images/wattodo-512x512.png",
+      "type":"image/png"
+    }
+  ]
+}

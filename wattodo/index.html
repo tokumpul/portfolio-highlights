@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang='fi'>
+<head>
+  <!-- Meta -->
+  <meta charset='utf-8'/>
+  <meta http-equiv='x-ua-compatible' content='ie=edge'/>
+  <meta name='apple-mobile-web-app-title' content='Wattodo'/>
+  <meta name='application-name' content='Wattodo'/>
+  <meta name='author' content='DML'/>
+  <meta name='description' content='Wattodo'/>
+  <meta name='robots' content='noindex, nofollow'/>
+  <meta name='theme-color' content='#1c1c1c'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <!-- Title -->
+  <title>Wattodo</title>
+  <!-- Icons -->
+  <link rel='apple-touch-icon' sizes='180x180' href='./images/wattodo-180x180.png'/>
+  <link rel='icon' type='image/png' sizes='32x32' href='./images/wattodo-32x32.png'/>
+  <link rel='icon' type='image/png' sizes='16x16' href='./images/wattodo-16x16.png'/>
+  <link rel='manifest' href='./manifest.json'/>
+  <!-- Wattodo CSS -->
+  <link rel='stylesheet' href='./styles/css/wattodo.min.css'/>
+  <!-- Vue JS -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js' defer></script>
+  <!-- Axios JS -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js' defer></script>
+  <!-- Wattodo JS -->
+  <script src='./scripts/js/wattodo.js' defer></script>
+</head>
+<body>
+  <section class='section'>
+    <div class='container'>
+      <!-- Logo -->
+      <div id='logo'>
+        <wattodo-logo
+          src='./images/wattodo-512x512.png'
+          alt='Wattodo'>
+        </wattodo-logo>
+      </div>
+      <!-- View 1 -->
+      <div id='categories'>
+        <div class='columns has-text-centered is-mobile is-multiline' v-if='view === 1'>
+          <div class='column is-full'>
+            <div class='columns has-text-centered'>
+              <div class='column'>
+                <p class='legend'>{{ texts[0].text }}</p>
+              </div>
+            </div>
+          </div>
+          <wattodo-category
+            v-for='category in categories'
+            :key='category'
+            :category='category.title'
+            @click.native='showCategory(category.id)'>
+          </wattodo-category>
+        </div>
+        <!-- View 2 -->
+        <div class='columns has-text-centered' v-else-if='view === 2'>
+          <div class='column'>
+            <div class='columns'>
+              <div class='column'>
+                <button class='button drop-shadow is-medium back-arrow' @click='showCategory'>
+                  <i class='fas fa-angle-left fa-lg'></i>
+                </button>
+              </div>
+            </div>
+            <div class='columns is-centered'>
+              <!-- View 2: Restaurants -->
+              <div class='column has-text-centered is-8' v-if='show === "Restaurants"'>
+                <p class='legend'>Fancy something specific?</p>
+                <div class='select is-fullwidth is-medium is-rounded'>
+                  <select v-model='selected'>
+                    <template v-for='filter in filters'>
+                      <option :key='filter'>{{ filter }}</option>
+                    </template>
+                  </select>
+                </div>
+              </div>
+              <!-- View 2: Movies -->
+              <div class='column has-text-centered is-8' v-else-if='show === "Movies"'>
+                <p class='legend'>Fancy something specific?</p>
+                <div class='select is-fullwidth is-medium is-rounded'>
+                  <select v-model='selected'>
+                    <template v-for='filter in filters'>
+                      <option :key='filter'>{{ filter }}</option>
+                    </template>
+                  </select>
+                </div>
+              </div>
+              <!-- View 2: Activities -->
+              <div class='column has-text-centered is-8' v-else-if='show === "Activities"'>
+                <p class='legend'>Fancy something specific?</p>
+                <div class='select is-fullwidth is-medium is-rounded'>
+                  <select v-model='selected'>
+                    <template v-for='filter in filters'>
+                      <option :key='filter'>{{ filter }}</option>
+                    </template>
+                  </select>
+                </div>
+              </div>
+              <!-- View 2: Recipes -->
+              <div class='column has-text-centered is-8' v-else-if='show === "Recipes"'>
+                <p class='legend'>Fancy something specific?</p>
+                <div class='select is-fullwidth is-medium is-rounded'>
+                  <select v-model='selected'>
+                    <template v-for='filter in filters'>
+                      <option :key='filter'>{{ filter }}</option>
+                    </template>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Wattodo Button -->
+            <div class='columns is-centered'>
+              <div class='column has-text-centered is-8'>
+                <p class='legend'>All set? Then it's time to tell you...</p>
+                <button class='button drop-shadow is-fullwidth is-medium is-rounded' @click='showWattodo'>&#9956;&nbsp;Wattodo!&nbsp;&#9956;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- View 3 -->
+        <div class='columns has-text-centered' v-else-if='view === 3'>
+          <div class='column'>
+            <div class='columns'>
+              <div class='column'>
+                <button class='button drop-shadow is-medium back-arrow' @click='showCategory'>
+                  <i class='fas fa-angle-left fa-lg'></i>
+                </button>
+              </div>
+            </div>
+            <div class='columns has-text-centered is-centered'>
+              <!-- View 3: Restaurants -->
+              <div class='column is-8' v-if='show === "Restaurants"'>
+                <div class='columns'>
+                  <div class='column field'>
+                    <div class='control has-icons-left'>
+                      <input class='input is-medium is-rounded' :value='wattodo.name' readonly/>
+                      <span class='icon is-left'>
+                        <i class='fas fa-utensils'></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class='columns'>
+                  <div class='column field'>
+                    <div class='control has-icons-left'>
+                      <input class='input is-medium is-rounded' :value='wattodo.address+", "+wattodo.postcode+" "+wattodo.postoffice' readonly/>
+                      <span class='icon is-left'>
+                        <i class='fas fa-map-marker-alt'></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class='columns'>
+                  <div class='column field'>
+                    <div class='control has-icons-left'>
+                      <input class='input is-medium is-rounded' :value='wattodo.openinghours' readonly/>
+                      <span class='icon is-left'>
+                        <i class='fas fa-clock'></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class='columns'>
+                  <div class='column field'>
+                    <div class='control has-icons-left'>
+                      <input class='input is-medium is-rounded' :value='wattodo.phone' readonly/>
+                      <span class='icon is-left'>
+                        <i class='fas fa-phone'></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class='columns has-text-centered is-centered'>
+                  <div class='column'>
+                    <p class='legend'>Show on map:</p>
+                    <a class='show-on-map drop-shadow' target='_blank' :href='showOnMap'>
+                      <span class='icon'>
+                        <i class='fas fa-map-marked-alt'></i>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <div class='columns'>
+                  <div class='column'>
+                    <img :src='wattodo.ad' alt='Ad'/>
+                  </div>
+                </div>
+              </div>
+              <!-- View 3: Movies -->
+              <div class='column is-8' v-else-if='show === "Movies"'>
+                <div class='columns'>
+                  <div class='column'>
+                    <img :src='wattodo.poster' alt='Poster'/>
+                  </div>
+                </div>
+                <div class='columns'>
+                  <div class='column'>
+                    <input class='input is-medium is-rounded' :value='wattodo.name' readonly/>
+                  </div>
+                </div>
+                <div class='columns'>
+                  <div class='column'>
+                    <div class='has-text-left is-size-5 list'>
+                      {{ wattodo.plot }}
+                    </div>
+                  </div>
+                </div>
+                <div class='columns' v-if='wattodo.trailer'>
+                  <div class='column'>
+                      <iframe width=100% :src='wattodo.trailer'></iframe>
+                  </div>
+                </div>
+              </div>
+              <!-- View 3: Activities -->
+              <div class='column is-8' v-else-if='show === "Activities"'>
+                <div class='columns'>
+                  <div class='column'>
+                    <input class='input is-medium is-rounded' :value='wattodo.name' readonly/>
+                  </div>
+                </div>
+                <div class='columns'>
+                  <div class='column'>
+                    <p class='legend'>Instructions:</p>
+                    <div class='has-text-left is-size-5 list'>
+                      <template v-for='instruction in wattodo.instructions'>
+                        {{ instruction }}<br :key='instruction'/>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+                <div class='columns' v-if='this.wattodo.steps[0] !== ""'>
+                  <div class='column'>
+                    <p class='legend'>Steps:</p>
+                    <div class='has-text-left is-size-5 list'>
+                      <template v-for='step in wattodo.steps'>
+                        {{ step }}<br :key='step'/>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- View 3: Recipes -->
+              <div class='column is-8' v-else-if='show === "Recipes"'>
+                <div class='columns'>
+                  <div class='column'>
+                    <img :src='wattodo.image' alt='Recipe'/>
+                  </div>
+                </div>  
+                <div class='columns'>
+                  <div class='column'>
+                    <input class='input is-medium is-rounded' :value='wattodo.name' readonly/>
+                  </div>
+                </div>
+                <div class='columns is-mobile'>
+                  <div class='column field is-4 recipe'>
+                    <div class='control has-icons-left'>
+                      <input class='input is-medium is-rounded' :value='wattodo.duration' readonly/>
+                      <span class='icon is-small is-left'>
+                        <i class='fas fa-hourglass-half fa-xs'></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class='column field is-4 recipe'>
+                    <div class='control has-icons-left'>
+                      <input class='input is-medium is-rounded' :value='wattodo.price' readonly/>
+                      <span class='icon is-small is-left'>
+                        <i class='fas fa-euro-sign fa-xs'></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class='column field is-4 recipe'>
+                    <div class='control has-icons-left'>
+                      <input class='input is-medium is-rounded' :value='wattodo.portions' readonly/>
+                      <span class='icon is-small is-left'>
+                        <i class='fas fa-chart-pie fa-xs'></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class='columns'>
+                  <div class='column'>
+                    <p class='legend'>Ingredients</p>
+                    <div class='has-text-left is-size-5 list'>
+                      <template v-for='ingredient in wattodo.ingredients'>
+                        {{ ingredient }}<br :key='ingredient'/>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+                <div class='columns'>
+                  <div class='column'>
+                    <p class='legend'>Instructions</p>
+                    <div class='has-text-left is-size-5 list'>
+                      <template v-for='instruction in wattodo.instructions'>
+                        {{ instruction }}<br :key='instruction'/>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
