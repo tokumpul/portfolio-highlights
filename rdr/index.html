@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Red Dog Redemption</title>
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.png">
+    <!-- google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jua">
+    <!-- rdr.css -->
+    <link rel="stylesheet" href="css/redDogRedemption.css">
+    <!-- jQuery.js -->
+    <script src="js/jquery-3.3.1.min.js" defer></script>
+    <!-- rdr.js -->
+    <script src="js/redDogRedemption.js" defer></script>
+</head>
+<body>
+    <div id="table">
+        <!-- buttons -->
+        <button id="yesButton" class="button" type="button">YES</button>
+        <button id="noButton" class="button" type="button">NO</button>
+        <button id="yesMultiplierButton" class="button" type="button">-</button>
+        <button id="noMultiplierButton" class="button" type="button">-</button>
+        <button id="balanceButton" class="button" type="button">5.00</button>
+        <button id="stakeButton" class="button" type="button">1.00</button>
+        <button id="playAgainButton" class="button" type="button">Play again</button>
+        <!-- images -->
+        <img id="logo" src="images/redDogRedemption.png" alt="Red Dog Redemption"/>
+        <img id="help" class="button2" src="images/help.png" alt="Help"/>
+        <img id="sounds" class="button2" src="images/soundsOn.png" alt="Sounds"/>
+        <img id="exit" class="button2" src="images/exit.png" alt="Exit"/>
+        <img id="card3" class="card" src="images/deck.png" alt="Card #3">
+        <img id="card2b" class="card" src="images/deck.png" alt="Card #2b"/>
+        <img id="card2a" class="card" src="images/deck.png" alt="Card #2"/>
+        <img id="card1" class="card" src="images/deck.png" alt="Card #1"/>
+        <img id="deck" class="card" src="images/deck.png" alt="Deck"/>
+        <!-- texts -->
+        <div id="yesMultiplierText" class="text">Yes-multiplier:</div>
+        <div id="noMultiplierText" class="text">No-multiplier:</div>
+        <div id="balanceText" class="text">Balance:</div>
+        <div id="stakeText" class="text">Stake:</div>
+        <div id="resultText" class="text"></div>
+        <div id="userText" class="text"></div>
+        <!-- form -->
+        <form>
+            <input id="username" class="user" type="text" maxlength="10" autocomplete="off" placeholder="Username" autofocus/>
+            <input id="submit" class="user" type="submit" value="Submit"/>
+        </form>
+    </div>
+</body>
+</html>

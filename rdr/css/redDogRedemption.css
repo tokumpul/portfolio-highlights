@@ -1,0 +1,213 @@
+/* general css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#table {
+    background: url(../images/table.png) center/100% no-repeat;
+    height: 720px;
+    position: absolute;
+    width: 1280px;
+}
+
+/* button css */
+.button {
+    background: url(../images/button.png) center/100% no-repeat;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px #363636;
+    color: #962a2a;
+    font: 40px "Jua", sans-serif;
+    height: 60px;
+    left: 1030px;
+    position: absolute;
+    text-shadow: 2px 2px 2px #363636;
+    top: 610px;
+    width: 200px;
+}
+
+#yesButton {
+    cursor: pointer;
+    top: 280px;
+}
+
+#yesButton:active {
+    box-shadow: 2px 2px 4px #363636;
+    top: 282px;
+}
+
+#noButton {
+    cursor: pointer;
+    top: 380px;
+}
+
+#noButton:active {
+    box-shadow: 2px 2px 4px #363636;
+    top: 382px;
+}
+
+#playAgainButton {
+    cursor: pointer;
+    display: none;
+    font-size: 30px;
+    left: 540px;
+    top: 330px;
+}
+
+#playAgainButton:active {
+    box-shadow: 2px 2px 4px #363636;
+    top: 332px;
+}
+
+#yesMultiplierButton {
+    left: 180px;
+}
+
+#noMultiplierButton {
+    left: 420px;
+}
+
+#balanceButton {
+    left: 660px;
+}
+
+#stakeButton {
+    cursor: pointer;
+    left: 900px;
+}
+
+#stakeButton:active {
+    box-shadow: 2px 2px 4px #363636;
+    top: 612px;
+}
+
+/* image css */
+.card {
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px #363636;
+    height: auto;
+    left: 50px;
+    position: absolute;
+    top: 194px;
+    width: 200px;
+}
+
+#deck {
+    cursor: pointer;
+}
+
+#deck:active {
+    box-shadow: 2px 2px 4px #363636;
+    top: 196px;
+}
+
+.button2 {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px #363636;
+    cursor: pointer;
+    height: 60px;
+    position: absolute;
+    top: 64px;
+    width: 60px;
+}
+
+.button2:active {
+    box-shadow: 2px 2px 4px #363636;
+    top: 66px;
+}
+
+#help {
+    left: 1020px;
+}
+
+#sounds {
+    left: 1100px;
+}
+
+#exit {
+    left: 1180px;
+}
+
+#logo {
+    height: 12.5%;
+    left: 107px;
+    position: absolute;
+    top: 45px;
+}
+
+/* text css */
+.text {
+    color: #f5f5f5;
+    font: 30px "Jua", sans-serif;
+    position: absolute;
+    text-shadow: 2px 2px 2px #363636;
+    top: 570px;
+}
+
+#yesMultiplierText {
+    left: 180px;
+}
+
+#noMultiplierText {
+    left: 420px;
+}
+
+#balanceText {
+    left: 660px;
+}
+
+#stakeText {
+    left: 900px;
+}
+
+#resultText {
+    display: none;
+    font-size: 60px;
+    height: 60px;
+    left: 400px;
+    text-align: center;
+    text-shadow: 4px 4px 4px #363636;
+    top: 64px;
+    width: 480px;
+}
+
+#userText {
+    font-size: 20px;
+    height: 30px;
+    left: 1020px;
+    top: 165px;
+    width: 220px;
+}
+
+/* form css */
+.user {
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px #363636;
+    color: #962a2a;
+    font-family: "Jua", sans-serif;
+    height: 30px;
+    position: absolute;
+    top: 200px;
+}
+
+#username {
+    left: 1020px;
+    padding-left: 5px;
+    width: 140px;
+}
+
+#submit {
+    cursor: pointer;
+    left: 1180px;
+    width: 60px;
+}
+
+#submit:active {
+    box-shadow: 2px 2px 4px #363636;
+    top: 202px;
+}
