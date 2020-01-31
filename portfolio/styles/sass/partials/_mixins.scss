@@ -1,0 +1,20 @@
+@mixin centralize {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin has-gradient($x, $y, $z) {
+  @if $z == 'linear' {
+    background: $x;
+    background: linear-gradient($x, $y);
+  } @else if $z == 'radial' {
+    background: $x;
+    background: radial-gradient(circle, $x, $y);
+  }
+}
+
+@mixin has-highlight($x, $y, $z) {
+  background: $y;
+  background: linear-gradient($x, $y, $z);
+}

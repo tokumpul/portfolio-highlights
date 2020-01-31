@@ -1,0 +1,29 @@
+body {
+  background-color: $black-1;
+  background-image: radial-gradient($white, rgba($white, .2) .1875rem, transparent 2rem), radial-gradient($white, rgba($white, .2) .125rem, transparent 1.75rem), radial-gradient($green, rgba($green, .2) .1875rem, transparent 2rem), radial-gradient($blue-2, rgba($blue-2, .2) .125rem, transparent 1.75rem);
+  background-position: 0 0, 2.5rem 3.75rem, 8rem 16.75rem, 4.25rem 6.25rem;
+  background-size: 34.25rem 34.25rem, 21.75rem 21.75rem, 15rem 15rem, 9.25rem 9.25rem;
+  color: $white;
+  display: block;
+  font-family: $electrolize;
+  a {
+    transition: .3s;
+  }
+  ul {
+    list-style: none;
+    padding-left: 1.3rem;
+    li {
+      &::before {
+        color: $green;
+        content: '\25cb';
+        display: inline-block;
+        margin-left: -1.3rem;
+        width: 1.3rem;
+      }
+    }
+  }
+  ::selection {
+    background: $green;
+    color: $white;
+  }
+}

@@ -1,0 +1,145 @@
+.navbar {
+  a {
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+  // .navbar-brand
+  &-brand {
+    @include has-gradient($blue-1, $blue-2, 'linear');
+    .navbar-item {
+      padding: 0 0 0 .75rem;
+      img {
+        max-height: 2rem;
+        max-width: 2rem;
+      }
+    }
+  }
+  // .navbar-menu
+  &-menu {
+    @include has-gradient($blue-1, $blue-2, 'linear');
+    .navbar-end {
+      @media screen and (max-width: 1023px) {
+        a {
+          @include has-highlight(to right, $green, transparent);
+          background-position: 0 50%;
+          background-repeat: no-repeat;
+          background-size: 0 50%;
+          &:hover {
+            background-color: transparent;
+            background-size: 50% 50%;
+            padding-left: 1.5rem;
+          }
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        a {
+          @include has-highlight(to top, $green, transparent);
+          background-position: 0 100%;
+          background-repeat: no-repeat;
+          background-size: 100% 0;
+          &:hover {
+            background-size: 100% 50%;
+            padding-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section {
+  padding-bottom: 0;
+  a {
+    @include has-highlight(to right, $green, transparent);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    color: $green;
+    width: auto;
+    &:hover {
+      background-size: 100% 100%;
+      color: $white;
+      padding: 0 3rem 0 1rem;
+    }
+  }
+  .is {
+    // .is-size-4
+    &-size-4 {
+      h1 {
+        margin-bottom: 1.5rem;
+        @media screen and (max-width: 768px) {
+          padding-left: 0;
+        }
+      }
+    }
+    // .is-size-6
+    &-size-6 {
+      h1 {
+        margin-bottom: 1.5rem;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.tk {
+  // .tk-circle
+  &-circle {
+    @include centralize;
+    @include has-gradient($blue-2, $blue-1, 'radial');
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+  }
+  // .tk-heading
+  &-heading {
+    @include has-gradient($blue-1, $blue-2, 'linear');
+    color: $white;
+    line-height: .375rem;
+    padding-left: .75rem;
+    text-shadow: .125rem .125rem .125rem rgba($black-2, .5);
+  }
+  // .tk-overlay
+  &-overlay {
+    background: rgba($black-2, .5);
+  }
+  // .tk-selfie
+  &-selfie {
+    border-radius: 50%;
+    margin: auto;
+    max-height: 16rem;
+    max-width: 16rem;
+  }
+  // .tk-skills
+  &-skills {
+    @include centralize;
+    .column {
+      padding-top: .75rem;
+      img {
+        max-height: 2.25rem;
+        max-width: 2.25rem;
+      }
+    }
+    @media screen and (min-width: 769px) {
+      .column {
+        padding-top: 1.40625rem;
+        &:first-child, &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+          padding-top: .75rem;
+        }
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      .column {
+        padding-top: .65625rem;
+        &:first-child, &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+          padding-top: .75rem;
+        }
+      }
+    }
+  }
+  // .tk-spacing
+  &-spacing {
+    padding: .75rem;
+  }
+}

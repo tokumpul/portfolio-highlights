@@ -1,0 +1,438 @@
+<!doctype html>
+<html class='has-navbar-fixed-top' lang='fi'>
+<head>
+  <!-- Metadata -->
+  <meta charset='utf-8'/>
+  <meta http-equiv='x-ua-compatible' content='ie=edge'/>
+  <meta name='apple-mobile-web-app-title' content='Tomi Kumpulainen'/>
+  <meta name='application-name' content='Tomi Kumpulainen'/>
+  <meta name='author' content='Tomi Kumpulainen'/>
+  <meta name='description' content='Portfolio'/>
+  <meta name='robots' content='noindex, nofollow'/>
+  <meta name='theme-color' content='#4080a0'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <!-- Title -->
+  <title>Tomi Kumpulainen</title>
+  <!-- Icons -->
+  <link rel='apple-touch-icon' sizes='180x180' href='./images/tk-icon-180x180.png'/>
+  <link rel='icon' type='image/png' sizes='32x32' href='./images/tk-icon-32x32.png'/>
+  <link rel='icon' type='image/png' sizes='16x16' href='./images/tk-icon-16x16.png'/>
+  <link rel='manifest' href='./manifest.json'/>
+  <!-- Portfolio CSS -->
+  <link rel='stylesheet' href='./styles/css/portfolio.min.css'/>
+  <!-- Vue JS -->
+  <script src='./scripts/vendor/vue-2.6.11/vue.js' defer></script>
+  <!-- Portfolio JS -->
+  <script src='./scripts/js/portfolio.js' defer></script>
+</head>
+<body>
+  <div id='page' @click='toggleActive'>
+    <!-- Navigation -->
+    <nav class='navbar is-fixed-top is-transparent'>
+      <div class='navbar-brand'>
+        <a class='navbar-item is-size-4' href='https://student.labranet.jamk.fi/~L5386/portfolio/'>
+          <img src='./images/tk-icon-transparent-512x512.png' alt='TK'/>
+          &nbsp;Tomi Kumpulainen
+        </a>
+        <a class='navbar-burger tk-toggle' data-target='navbar-end' :class='{ "is-active": isActive }'>
+          <span class='tk-toggle'></span>
+          <span class='tk-toggle'></span>
+          <span class='tk-toggle'></span>
+        </a>
+      </div>
+      <div class='navbar-menu' :class='{ "is-active": isActive }'>
+        <div class='navbar-end'>
+          <a class='navbar-item' href='#yleista'>Yleistä</a>
+          <a class='navbar-item' href='#portfolio'>Portfolio</a>
+          <a class='navbar-item' href='#tyonaytteet'>Työnäytteet</a>
+          <a class='navbar-item' href='#yhteystiedot'>Yhteystiedot</a>
+        </div>
+      </div>
+    </nav>
+    <div class='container'>
+      <!-- Selfie -->
+      <section class='section'>
+        <div class='container'>
+          <div class='columns has-text-centered'>
+            <div class='column'>
+              <img class='tk-selfie' src='./images/tk-selfie-512x512.jpg' alt='Tomi Kumpulainen'/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Yleistä -->
+      <section class='section'>
+        <div class='columns has-text-centered-mobile has-text-left-tablet is-size-4' id='yleista'>
+          <div class='column'>
+            <h1 class='tk-heading'>Yleistä</h1>
+          </div>  
+        </div>
+        <div class='columns tk-spacing'>
+          <div class='column tk-overlay'>
+            <p>Tämän sivun tarkoituksena on tarjota nopea, selkeä ja yksinkertainen tapa tutustua koulutukseeni, osaamiseeni, työkokemukseeni ja työnäytteisiini. Olen 25-vuotias kolmannen vuoden mediatekniikan suuntautumisen tieto- ja viestintätekniikan insinööriopiskelija Jyväskylän ammattikorkeakoulussa. Tavoitteeni on valmistua insinööriksi vuonna 2020 ja päästä kehittämään taitojani, sekä luomaan menestyksekästä uraa web-kehityksen parissa jonkun alan merkittävän yrityksen nimissä.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Portfolio -->
+      <section class='section'>
+        <div class='columns has-text-centered-mobile has-text-left-tablet is-size-4' id='portfolio'>
+          <div class='column'>
+            <h1 class='tk-heading'>Portfolio</h1>
+          </div>
+        </div>
+        <div class='columns'>
+          <!-- Koulutus -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>Koulutus</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <ul>
+                  <li>Tieto- ja viestintätekniikka, Insinööri [AMK], JAMK [aloittanut 8/2017].</li><br/>
+                  <li>Tieto- ja viestintätekniikan perustutkinto, Datanomi, JAO [8/2012 - 5/2015].</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Muu koulutus -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>Muu koulutus</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <ul>
+                  <li>Hygieniaosaamiskortti [2/2014].</li><br/>
+                  <li>Ajokortti, B-luokka [2/2013].</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='columns'>
+          <!-- Ammatillinen osaaminen -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>Ammatillinen osaaminen</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <div class='columns has-text-centered is-mobile is-multiline tk-skills'>
+                  <div class='column is-4-mobile is-3-tablet'>
+                    <span class='icon is-large'>
+                      <i class='fab fa-html5 fa-3x'></i>
+                    </span>
+                    <p>HTML5</p>
+                  </div>
+                  <div class='column is-4-mobile is-3-tablet'>
+                    <span class='icon is-large'>
+                      <i class='fab fa-css3-alt fa-3x'></i>
+                    </span>
+                    <p>CSS3</p>
+                  </div>
+                  <div class='column is-4-mobile is-3-tablet'>
+                    <span class='icon is-large'>
+                      <img src='./images/bulma-512x512.png' alt='Bulma'/>
+                    </span>
+                    <p>Bulma</p>
+                  </div>
+                  <div class='column is-4-mobile is-3-tablet'>
+                    <span class='icon is-large'>
+                      <i class='fab fa-sass fa-3x'></i>
+                    </span>
+                    <p>Sass</p>
+                  </div>
+                  <div class='column is-4-mobile is-3-tablet'>
+                    <span class='icon is-large'>
+                      <i class='fab fa-js-square fa-3x'></i>
+                    </span>
+                    <p>JavaScript</p>
+                  </div>
+                  <div class='column is-4-mobile is-3-tablet'>
+                    <span class='icon is-large'>
+                      <img src='./images/jquery-512x512.png' alt='jQuery'/>
+                    </span>
+                    <p>jQuery</p>
+                  </div>
+                  <div class='column is-4-mobile is-3-tablet'>
+                    <span class='icon is-large'>
+                      <i class='fab fa-react fa-3x'></i>
+                    </span>
+                    <p>React.js</p>
+                  </div>
+                  <div class='column is-4-mobile is-3-tablet'>
+                    <span class='icon is-large'>
+                      <i class='fab fa-vuejs fa-3x'></i>
+                    </span>
+                    <p>Vue.js</p>
+                  </div>
+                  <div class='column is-4-mobile is-3-tablet'>
+                    <span class='icon is-large'>
+                      <i class='fab fa-npm fa-3x'></i>
+                    </span>
+                    <p>npm</p>
+                  </div>
+                  <div class='column is-4-mobile is-3-tablet'>
+                    <span class='icon is-large'>
+                      <i class='fab fa-php fa-3x'></i>
+                    </span>
+                    <p>PHP</p>
+                  </div>
+                  <div class='column is-4-mobile is-3-tablet'>
+                    <span class='icon is-large'>
+                      <i class='fab fa-laravel fa-3x'></i>
+                    </span>
+                    <p>Laravel</p>
+                  </div>
+                  <div class='column is-4-mobile is-3-tablet'>
+                    <span class='icon is-large'>
+                      <i class='fab fa-adobe fa-3x'></i>
+                    </span>
+                    <p>Photoshop</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Muu osaaminen -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>Muu osaaminen</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <ul>
+                  <li>Kielitaito:<br/><br/>Suomi, äidinkieli.<br/>Englanti, erinomainen suullinen ja kirjallinen.<br/>Ruotsi, tyydyttävä suullinen ja kirjallinen.</li><br/>
+                  <li>Huuto.net:<br/><br/>Yli kymmenen vuoden kokemus satojen erilaisten myynti-ilmoitusten suunnittelusta ja toteutuksesta, sekä asiakaspalvelusta täydellisellä palautehistorialla Huuto.net -sivustolla.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='columns'>
+          <!-- Työkokemus -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>Työkokemus</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <ul>
+                  <li>It-tukihenkilö, Alkio-opiston kannatusyhdistys ry [2/2016 - 12/2016].<br/><br/>Työasemien ylläpito ja uusien työasemien käyttöönotto, verkkotulostimien ja kopiokoneiden ylläpito, verkkoyhteyksien ylläpito, verkkosivujen ja info-tv:n päivitys, vikatilanteiden selvitys, käyttäjien neuvonta ja opastus, lomakepohjien päivitys, suunnittelu ja toteutus, opiskelijoiden ja muiden asiakkaiden vastaanotto ja majoitus.</li><br/>
+                  <li>It-tukihenkilö, Korpilahden yhtenäiskoulu [11/2014 - 5/2015].<br/><br/>Tablet-laitteiden ylläpito ja niiden hallinnan suunnittelu, toteutus ja dokumentointi. Työasemien ylläpito, vikatilanteiden selvitys, käyttäjien neuvonta ja opastus.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Työnäytteet -->
+      <section class='section'>
+        <div class='columns has-text-centered-mobile has-text-left-tablet is-size-4' id='tyonaytteet'>
+          <div class='column'>
+            <h1 class='tk-heading'>Työnäytteet</h1>
+          </div>
+        </div>
+        <div class='columns'>
+          <!-- Portfolio-sivu Bulmalla -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>Portfolio-sivu Bulmalla [PWA]</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <p>Sivu jota parhaillaan selaat! Sivun tarkoituksena on tiivistää tärkeimmät tietoni, sekä kerätä merkittävimmät työnäytteeni yhteen ja helposti saatavilla olevaan paikkaan. Sivu on toteutettu Bulman, Sassin ja Vuen avulla erityisesti mobiililaitteita ajatellen, mutta sivu skaalautuu responsiivisesti myös isommille ruuduille.<br/><br/><a href='https://student.labranet.jamk.fi/~L5386/portfolio/' target='_blank'>Linkki työnäytteeseen</a></p>
+              </div>
+            </div>
+          </div>
+          <!-- Super Lunchnator 3000 -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>Super Lunchnator 3000 [PWA]</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <p>Ratkaisu insinööriopiskelijoita päivittäin askarruttavaan kysymykseen: missä syödä tänään? Sovellus kokoaa lähialueen opiskelijaravintoloiden ruokalistat yhteen ja nopeasti saatavilla olevaan paikaan, sekä tarjoaa reittiohjeet kaikille pimennossa eläneille. Sovellus on toteutettu Bulman, Sassin, Vuen ja PHP:n avulla.<br/><br/><a href='https://student.labranet.jamk.fi/~L5386/sl3k/' target='_blank'>Linkki työnäytteeseen</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='columns'>
+          <!-- Wattodo -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>Wattodo [PWA]</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <p>Sovellus, jonka tarkoituksena on auttaa päättämään erilaisten arkisten asioiden kanssa, kuten missä syödä tänään tai minkä elokuvan katsoisi illalla. Wattodo arpoo valitusta kategoriasta satunnaisen ehdotuksen ja näyttää siihen liittyvää tietoa, kuten ravintolan sijainnin kartalla tai elokuvan trailerin ja tiivistelmän juonesta.<br/><br/><a href='https://student.labranet.jamk.fi/~L5386/wattodo/' target='_blank'>Linkki työnäytteeseen</a></p>
+              </div>
+            </div>
+          </div>
+          <!-- Red Dog Redemption -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>Red Dog Redemption</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <p>Sovellus pohjautuu aitoon Red Dog -korttipeliin ja pyrkii visualisoimaan sen kolikkopeliautomaatin toimintaperiaatteita noudattaen. Korttien tiedot haetaan JSON-tiedostosta Ajax-tekniikkaa hyödyntäen ja kortteja liikutellaan jQueryn animate-metodilla. Kaikki sovelluksessa käytetty grafiikka on täysin itsetuotettua.<br/><br/><a href='https://student.labranet.jamk.fi/~L5386/rdr/' target='_blank'>Linkki työnäytteeseen</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='columns'>
+          <!-- Shady Backdoor Deals -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>Shady Backdoor Deals</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <p>Kieli poskessa projektityönä toteutettu koulutehtävien myyntiin erikoistuva palvelu, jossa käyttäjä voi joko ilmoittaa tehtäviään muille tehtäväksi tai tehdä muiden käyttäjien ilmoittamia tehtäviä rahallista korvausta vastaan. Palvelun pohjana toimii Laravel ja MySQL-tietokanta. Palvelun käyttö vaatii rekisteröitymisen.<br/><br/><a href='http://backdoordeals.tk/login' target='_blank'>Linkki työnäytteeseen</a></p>
+              </div>
+            </div>
+          </div>
+          <!-- ToDo-lista Reactilla -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>ToDo-lista Reactilla</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <p>Yksinkertainen ToDo-lista sovellus joka havainnollistaa hyvin Reactin Virtual DOM:in toimintaa. Listalle voidaan lisätä tehtäviä ja niitä voidaan poistaa halutussa järjestyksessä klikkaamalla tehtävän perään liitettyä rastia. Sovellus koostuu neljästä eri komponentista, joidenka avulla lista ja sen tiedot renderöidään.<br/><br/><a href='https://student.labranet.jamk.fi/~L5386/todo/' target='_blank'>Linkki työnäytteeseen</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- GitHub-repositorio -->
+        <div class='columns'>
+          <div class='column is-6-tablet'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>GitHub-repositorio</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <p>Kaikkien listattujen työnäytteiden [paitsi Shady Backdoor Dealsin] lähdekoodit ovat nähtävissä kokonaisuudessaan GitHubissa, joten jos joku toteutus herätti kysymyksiä tai olet muuten vain kiinnostunut näkemään tarkemmin kooditason työskentelyäni, kannattaa kyseinen repositorio käydä vilkaisemassa!<br/><br/><a href='https://github.com/tokumpul/portfolio-highlights' target='_blank'>Linkki repositorioon</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Yhteystiedot -->
+      <section class='section'>
+        <div class='columns has-text-centered-mobile has-text-left-tablet is-size-4' id='yhteystiedot'>
+          <div class='column'>
+            <h1 class='tk-heading'>Yhteystiedot</h1>
+          </div>
+        </div>
+        <div class='columns'>
+          <!-- Sähköposti -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>Sähköposti</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <p>
+                  <span class='icon is-medium'>
+                    <i class='fas fa-envelope tk-circle'></i>
+                  </span>
+                  &nbsp;tokumpul@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Puhelin -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>Puhelin</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <p>
+                  <span class='icon is-medium'>
+                    <i class='fas fa-phone tk-circle'></i>
+                  </span>
+                  &nbsp;050 918 6049
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='columns'>
+          <!-- LinkedIn -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>LinkedIn</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <span class='icon is-medium'>
+                  <i class='fab fa-linkedin-in tk-circle'></i>
+                </span>&nbsp;
+                <a href='https://linkedin.com/in/tokumpul' target='_blank'>Linkki profiiliin</a>
+              </div>
+            </div>
+          </div>
+          <!-- GitHub -->
+          <div class='column'>
+            <div class='columns is-size-5'>
+              <div class='column'>
+                <h1 class='tk-heading'>GitHub</h1>
+              </div>
+            </div>
+            <div class='columns tk-spacing'>
+              <div class='column tk-overlay'>
+                <span class='icon is-medium'>
+                  <i class='fab fa-github tk-circle'></i>
+                </span>&nbsp;
+                <a href='https://github.com/tokumpul/portfolio-highlights' target='_blank'>Linkki repositorioon</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Copyright -->
+      <section class='section'>
+        <div class='columns has-text-centered is-size-6'>
+          <div class='column'>
+            <h1 class='tk-heading'>Copyright &copy; 2020 Tomi Kumpulainen</h1>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name":"Tomi Kumpulainen",
+  "short_name":"TK",
+  "start_url":"./",
+  "scope":"./",
+  "theme_color":"#4080a0",
+  "background_color":"#4080a0",
+  "orientation":"portrait-primary",
+  "display":"standalone",
+  "icons": [
+    {
+      "sizes":"192x192",
+      "src":"./images/tk-icon-192x192.png",
+      "type":"image/png"
+    },
+    {
+      "sizes":"512x512",
+      "src":"./images/tk-icon-512x512.png",
+      "type":"image/png"
+    }
+  ]
+}
