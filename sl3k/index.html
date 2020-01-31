@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang='fi'>
+<head>
+  <!-- Metadata -->
+  <meta charset='utf-8'/>
+  <meta http-equiv='x-ua-compatible' content='ie=edge'/>
+  <meta name='apple-mobile-web-app-title' content='Super Lunchnator 3000'/>
+  <meta name='application-name' content='Super Lunchnator 3000'/>
+  <meta name='author' content='Tomi Kumpulainen'/>
+  <meta name='description' content='Super Lunchnator 3000'/>
+  <meta name='robots' content='noindex, nofollow'/>
+  <meta name='theme-color' content='#101010'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <!-- Title -->
+  <title>Super Lunchnator 3000</title>
+  <!-- Icons -->
+  <link rel='apple-touch-icon' sizes='180x180' href='./images/sl3k-icon-180x180.png'/>
+  <link rel='icon' type='image/png' sizes='32x32' href='./images/sl3k-icon-32x32.png'/>
+  <link rel='icon' type='image/png' sizes='16x16' href='./images/sl3k-icon-16x16.png'/>
+  <link rel='manifest' href='./manifest.json'/>
+  <!-- Super Lunchnator 3000 CSS -->
+  <link rel='stylesheet' href='./styles/css/sl3k.min.css'/>
+  <!-- Vue JS -->
+  <script src='./scripts/vendor/vue-2.6.11/vue.js' defer></script>
+  <!-- Axios JS -->
+  <script src='./scripts/vendor/axios-0.19.0/axios.js' defer></script>
+  <!-- Super Lunchnator 3000 JS -->
+  <script src='./scripts/js/sl3k.js' defer></script>
+</head>
+<body>
+  <section class='section'>
+    <div class='container' id='restaurants'>
+      <!-- Logo -->
+      <div class='columns has-text-centered' id='logo'>
+        <sl3k-logo
+          :src='src'
+          :alt='alt'>
+        </sl3k-logo>
+      </div>
+      <!-- View 1 -->
+      <div class='columns has-text-centered is-mobile is-multiline' v-if='view === 1'>
+        <sl3k-restaurants
+          v-for='restaurant in restaurants'
+          :key='restaurant.id'
+          :restaurant='restaurant.name'
+          @click.native='showMenu(restaurant.id)'>
+        </sl3k-restaurants>
+      </div>
+      <!-- View 2 -->
+      <div class='columns' v-else-if='view === 2'>
+        <div class='column'>
+          <div class='columns is-mobile'>
+            <!-- Change View Button -->
+            <div class='column'>
+              <button class='button sl3k-button-small' @click='changeView'>
+                <span class='icon is-medium'>
+                  <i class='fas fa-reply fa-2x'></i>
+                </span>
+              </button>
+            </div>
+            <!-- Website Button -->
+            <div class='column'>
+              <button class='button sl3k-button-small sl3k-website' v-if='!getService'>
+                <a :href='getWebsite' target='_blank'>
+                  <span class='icon is-medium'>
+                    <i class='fas fa-globe fa-2x'></i>
+                  </span>
+                </a>
+              </button>
+            </div>
+            <!-- Location Button -->
+            <div class='column'>
+              <button class='button sl3k-button-small sl3k-location' v-if='!getService'>
+                <a :href='getLocation' target='_blank'>
+                  <span class='icon is-medium'>
+                    <i class='fas fa-map-marked-alt fa-2x'></i>
+                  </span>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- Menu -->
+          <div class='columns is-mobile sl3k-menu-header'>
+            <div class='column'>
+              {{ show }}
+            </div>
+            <div class='column has-text-right'>
+              {{ getDate }}
+            </div>
+          </div>
+          <!-- Warnings -->
+          <div class='columns has-text-centered-tablet is-mobile sl3k-warning' v-if='getWarning'>
+            <div class='column is-2-mobile is-3-tablet'>
+              <span class='icon'>
+                <i class='fas fa-exclamation-triangle fa-lg'></i>
+              </span>
+            </div>
+            <div class='column is-8-mobile is-6-tablet'>
+              {{ getWarning }}
+            </div>
+            <div class='column is-2-mobile is-3-tablet'>
+              <span class='icon'>
+                <i class='fas fa-exclamation-triangle fa-lg'></i>
+              </span>
+            </div>
+          </div>
+          <!-- Loading -->
+          <div class='columns has-text-centered sl3k-loading' v-if='loading'>
+            <div class='column'>
+              <span class='icon is-medium'>
+                <i class='fas fa-spinner fa-2x'></i>
+              </span>
+            </div>
+          </div>
+          <!-- Bittipannu -->
+          <template v-for='lunch in menu'>
+            <div class='columns is-mobile sl3k-menu' v-if='show === "Bittipannu" && !noMenu'>
+              <div class='column is-9'>
+                {{ lunch.title_fi }}
+              </div>
+              <div class='column has-text-right is-3'>
+                {{ lunch.price }}
+              </div>
+            </div>
+            <!-- Aimo / Fiilu / Siltavouti -->
+            <div class='columns is-mobile sl3k-menu' v-else-if='getRestaurant && !noMenu'>
+              <div class='column is-9'>
+                {{ lunch.Components[0] }}<!--
+                --><template v-if='lunch.Components[1]'>,
+                  {{ lunch.Components[1] }}<!--
+                  --><template v-if='lunch.Components[2]'>,
+                    {{ lunch.Components[2] }}
+                  </template>
+                </template>
+              </div>
+              <div class='column has-text-right is-3'>
+                {{ lunch.Price }}
+              </div>
+            </div>
+          </template>
+          <!-- No Menu -->
+          <div class='columns has-text-centered sl3k-menu' v-if='noMenu'>
+            <div class='column'>
+              {{ noMenu }}
+            </div>
+          </div>
+          <!-- Pizza-online / Wolt -->
+          <div class='columns has-text-centered is-mobile sl3k-service' v-if='getService'>
+            <div class='column is-3-mobile is-4-tablet'>
+              <span class='icon is-medium'>
+                <i class='fas fa-long-arrow-alt-right fa-2x'></i>
+              </span>
+            </div>
+            <div class='column is-6-mobile is-4-tablet'>
+              <a :href='getWebsite' target='_blank'>
+                {{ menu }}
+              </a>
+            </div>
+            <div class='column is-3-mobile is-4-tablet'>
+              <span class='icon is-medium'>
+                <i class='fas fa-long-arrow-alt-left fa-2x'></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

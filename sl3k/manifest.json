@@ -1,0 +1,22 @@
+{
+  "name":"Super Lunchnator 3000",
+  "short_name":"SL3K",
+  "start_url":"./",
+  "scope":"./",
+  "theme_color":"#101010",
+  "background_color":"#101010",
+  "orientation":"portrait-primary",
+  "display":"standalone",
+  "icons": [
+    {
+      "sizes":"192x192",
+      "src":"./images/sl3k-icon-192x192.png",
+      "type":"image/png"
+    },
+    {
+      "sizes":"512x512",
+      "src":"./images/sl3k-icon-512x512.png",
+      "type":"image/png"
+    }
+  ]
+}

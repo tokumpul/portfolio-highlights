@@ -1,0 +1,15 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+@import './partials/variables';
+@import './../vendor/bulma-0.8.0/sass/utilities/_all';
+@import './../vendor/bulma-0.8.0/sass/base/_all';
+@import './../vendor/bulma-0.8.0/sass/elements/button';
+@import './../vendor/bulma-0.8.0/sass/elements/container';
+@import './../vendor/bulma-0.8.0/sass/elements/icon';
+@import './../vendor/bulma-0.8.0/sass/grid/columns';
+@import './../vendor/bulma-0.8.0/sass/layout/section';
+@import './../vendor/fontawesome-5.12.0/scss/fontawesome';
+@import './../vendor/fontawesome-5.12.0/scss/solid';
+@import './partials/mixins';
+@import './partials/general';
+@import './partials/classes';

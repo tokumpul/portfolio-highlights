@@ -1,0 +1,23 @@
+html {
+  background-color: $black;
+  body {
+    color: $silver;
+    font-family: $space-mono;
+    a, a:visited, a:hover, a:active {
+      color: $silver;
+    }
+    div:first-child {
+      div:first-child {
+        position: relative;
+      }
+    }
+    ::-moz-selection {
+      background: $purple;
+      color: $silver;
+    }
+    ::selection {
+      background: $purple;
+      color: $silver;
+    }
+  }
+}

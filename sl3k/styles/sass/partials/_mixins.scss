@@ -1,0 +1,119 @@
+@mixin centralize {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin centralize-text {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin has-gradient($x, $y) {
+  background: $x;
+  background: -webkit-radial-gradient(circle, $x 1rem, $y);
+  background: -moz-radial-gradient(circle, $x 1rem, $y);
+  background: -o-radial-gradient(circle, $x 1rem, $y);
+  background: radial-gradient(circle, $x 1rem, $y);
+}
+
+@mixin move($x) {
+  @if $x == 'right' {
+    @keyframes right {
+      0% { padding-left: 0; }
+      100% { padding-left: 1.5rem; }
+    }
+    animation: right .5s linear infinite alternate;
+  }
+  @if $x == 'left' {
+    @keyframes left {
+      0% { padding-right: 0; }
+      100% { padding-right: 1.5rem; }
+    }
+    animation: left .5s linear infinite alternate;
+  }
+}
+
+@mixin neon-border-bottom($x) {
+  border-bottom: .125rem solid $x;
+  box-shadow: inset 0 -1.25rem 1rem -1.25rem $x;
+}
+
+@mixin neon-border-circle($x, $y) {
+  @include has-gradient($y, $x);
+  border: .125rem solid $x;
+  border-radius: 50%;
+  box-shadow: 0 0 1rem $x;
+}
+
+@mixin neon-color($x) {
+  color: $x;
+  text-shadow: 0 0 1rem $x;
+}
+
+@mixin neon-flicker-box($x, $y) {
+  @keyframes neon-flicker-box {
+    0%, 12%, 24%, 36%, 100% {
+      box-shadow: 0 0 1rem $x;
+      opacity: 1;
+    }
+    16% {
+      box-shadow: 0 0 1.5rem $x;
+      opacity: 1;
+    }
+    13%, 17%, 25% {
+      box-shadow: none;
+      opacity: .1;
+    }
+  }
+  animation: neon-flicker-box 3s infinite $y;
+}
+
+@mixin neon-flicker-text($x, $y) {
+  @keyframes neon-flicker-text {
+    0%, 12%, 24%, 36%, 100% {
+      opacity: 1;
+      text-shadow: 0 0 1rem $x, 0 0 .25rem $black;
+    }
+    16% {
+      opacity: 1;
+      text-shadow: 0 0 1.5rem $x, 0 0 .25rem $black;
+    }
+    13%, 17%, 25% {
+      opacity: .1;
+      text-shadow: none;
+    }
+  }
+  animation: neon-flicker-text 3s infinite $y;
+}
+
+@mixin neon-flicker-sign($x, $y, $z) {
+  @keyframes neon-flicker-sign {
+    0%, 12%, 24%, 36%, 100% {
+      box-shadow: 0 0 1rem $y;
+      opacity: 1;
+      text-shadow: 0 0 1rem $x;
+    }
+    16% {
+      box-shadow: 0 0 1.5rem $y;
+      opacity: 1;
+      text-shadow: 0 0 1.5rem $x;
+    }
+    13%, 17%, 25% {
+      box-shadow: none;
+      opacity: .1;
+      text-shadow: none;
+    }
+  }
+  animation: neon-flicker-sign 3s infinite $z;
+}
+
+@mixin loading {
+  @keyframes loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  animation: loading 1s linear infinite;
+}
